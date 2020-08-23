@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url('./res/fonts/AlegreyaSans-Italic.woff2') format('woff2'),
-      url('./res/fonts/AlegreyaSans-Italic.woff') format('woff');
+  src: url('../fonts/AlegreyaSans-Italic.woff2') format('woff2'),
+      url('../fonts/AlegreyaSans-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('./res/fonts/MontserratAlternates-Bold.woff2') format('woff2'),
-      url('./res/fonts/MontserratAlternates-Bold.woff') format('woff');
+  src: url('../fonts/MontserratAlternates-Bold.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'Montserrat Alternates';
-  src: url('./res/fonts/MontserratAlternates-Regular.woff2') format('woff2'),
-      url('./res/fonts/MontserratAlternates-Regular.woff') format('woff');
+  src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url('./res/fonts/AlegreyaSans-Regular.woff2') format('woff2'),
-      url('./res/fonts/AlegreyaSans-Regular.woff') format('woff');
+  src: url('../fonts/AlegreyaSans-Regular.woff2') format('woff2'),
+      url('../fonts/AlegreyaSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url('./res/fonts/AlegreyaSans-Bold.woff2') format('woff2'),
-      url('./res/fonts/AlegreyaSans-Bold.woff') format('woff');
+  src: url('../fonts/AlegreyaSans-Bold.woff2') format('woff2'),
+      url('../fonts/AlegreyaSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
   font-family: 'Monsieur La Doulaise';
-  src: url('./res/fonts/MonsieurLaDoulaise-Regular.woff2') format('woff2'),
-      url('./res/fonts/MonsieurLaDoulaise-Regular.woff') format('woff');
+  src: url('../fonts/MonsieurLaDoulaise-Regular.woff2') format('woff2'),
+      url('../fonts/MonsieurLaDoulaise-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -66,7 +66,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-size: 15pt;
-  background-image: url(./res/images/background-640.png);
+  background-image: url(../images/background-640.png);
   color: #550055;
 }
 
@@ -94,9 +94,7 @@ a {
   color: #550055;
 }
 
-a:hover {  
-  
-}
+
 
 p {
   margin-bottom: .5em;
@@ -138,6 +136,7 @@ nav li {
     text-align: right;
     
 }
+
 nav a {
   text-decoration: none;
   color: #550055;
@@ -246,10 +245,9 @@ nav a:hover {
   /**
    * At slightly wider sizes, show sidebar elements side by side (each taking up half the space, minus gutter gap and stuff).
    */
-  
-  @media (min-width: 900px) and (max-width: 1366px) {
+  @media (min-width: 900px)  {
     body {
-      background-image: url(./res/images/background-1366.png);           
+      background-image: url(../images/background-1366.png);           
       font-size: 17pt;     
     }
 
@@ -261,10 +259,12 @@ nav a:hover {
 
     nav {
       display: block;
-      width: 100%;
+      width: 100%;      
       text-align: right;
       font-size: .8em;
       background-color: rgba( 255, 186, 0, .7);    
+      position: fixed;
+      top: 0;
     }
 
     nav .burger-menu {
@@ -278,7 +278,7 @@ nav a:hover {
       display: inline;
       padding: 1em;   
     }
-  
+    
     h2 {
       font-size: 1.1em;
     }
@@ -307,7 +307,7 @@ nav a:hover {
   @media (min-width: 1366px) {
     
     body {
-        background-image: url(./res/images/background-1920.png);     
+        background-image: url(../images/background-1920.png);     
         font-size: 18pt;           
     }
     
@@ -315,39 +315,6 @@ nav a:hover {
       font-family: 'Monsieur La Doulaise', 'Arial', 'Sans Serif';
       font-size: 6em;
       margin-top: 1.7em;
-    }
-    
-    nav {
-      display: block;
-      width: 100%;
-      text-align: right;
-      font-size: .8em;
-      background-color: rgba( 255, 186, 0, .7);     
-    }
-
-    nav .burger-menu {
-      display: none;
-    }
-
-    nav ul {
-      margin-right: 1em;
-    }
-    nav li {
-      display: inline;
-      padding: 1em;   
-    }
-  
-    h2 {
-      font-size: 1.1em;
-    }
-    
-    
-    .box-menu {
-      font-size: 1.2rem;
-    }
-
-    .box h2 {
-      padding: .4em 1em;
     }
 
     /**
@@ -364,6 +331,7 @@ nav a:hover {
      */
     
     .sidebar {
+      grid-template-columns: 1fr;
       grid-auto-rows: min-content; /* 1 */
       grid-row: span 3; /* 2 */
     }

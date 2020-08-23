@@ -7,19 +7,19 @@
     <!-- html5-varianten av <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- responsive design: https://www.w3schools.com/css/css_rwd_viewport.asp -->
-    <link rel="stylesheet" href="main.css" class="css">
+    <link rel="stylesheet" href="res/style/main.css" class="css">
     <title>TesseracT Fansite</title>
 </head>
 
 <body>
     
-    <header class="sticky">
+    <header>
         <nav class="main-menu">
             <i class="burger-menu">Open/Close</i>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#discography">Discography</a></li>
-                <li><a href="#members">Members</a></li>
+                <li><a href="#about" class="anchor">About</a></li>
+                <li><a href="#discography" class="anchor">Discography</a></li>
+                <li><a href="#members" class="anchor">Members</a></li>
             </ul>
         </nav>
         <h1>TesseracT</h1>        
@@ -48,7 +48,7 @@
                 </ul>
             </div>
         </div>
-        <div id="discograpy" class="section discography">
+        <div id="discography" class="section discography">
             <h2>Discoraphy</h2>
             <div class="flex-container">
                 <div class="flex-item">One (2011)</div>
@@ -72,6 +72,7 @@
     <div class="footer">Social media and other stuff...</div>
 </body>
 
-<script src="node_modules/sticky-js/dist/sticky.min.js"></script>
+<script src="node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="res/script/main.js"></script>
 </html>
-<script src="node_modules/sticky-js/dist/sticky.min.js"></script>
+
