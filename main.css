@@ -1,0 +1,294 @@
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./res/fonts/AlegreyaSans-Italic.woff2') format('woff2'),
+      url('./res/fonts/AlegreyaSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('./res/fonts/MontserratAlternates-Bold.woff2') format('woff2'),
+      url('./res/fonts/MontserratAlternates-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('./res/fonts/MontserratAlternates-Regular.woff2') format('woff2'),
+      url('./res/fonts/MontserratAlternates-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./res/fonts/AlegreyaSans-Regular.woff2') format('woff2'),
+      url('./res/fonts/AlegreyaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./res/fonts/AlegreyaSans-Bold.woff2') format('woff2'),
+      url('./res/fonts/AlegreyaSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monsieur La Doulaise';
+  src: url('./res/fonts/MonsieurLaDoulaise-Regular.woff2') format('woff2'),
+      url('./res/fonts/MonsieurLaDoulaise-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya Sans','Trebuchet MS',  sans-serif;
+    
+}
+
+body {
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 14pt;
+  background-image: url(./res/images/background-640.png);
+}
+
+div {
+  /* border: 1px solid #fff; */
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: 'Montserrat Alternates', Arial, sans-serif;
+}
+
+header {
+    text-align: right;
+    color: #ffba00;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p {
+  margin-bottom: .5em;
+  font-size: .8em;
+  line-height: 1.7em;
+  
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: .3em;
+  color: #ffba00;
+}
+
+header h1 {
+  font-family: 'Monsieur La Doulaise', 'Arial', 'Sans Serif';
+  font-size: 5em;
+  text-align: right; 
+  padding: 0 1em;
+}
+
+nav {
+    background-color: #ffba00;
+    text-align: right;
+    padding: 1em 2em;
+    
+}
+
+nav li {
+    display: inline;
+    padding: 0 1em;    
+    
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Montserrat Alternates', Arial, sans-serif;
+  font-size: .8em;
+}
+
+nav a:hover {
+
+  background: 
+  -webkit-gradient(linear, left top, left bottom, from(#d18817), to(#7e2d40));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ffba00;
+} 
+.box {
+  background: #550055;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+}
+
+.box h2 {
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+  background: #ffba00;
+  color: #550055;
+  padding: .3em .6em;
+  font-size: .8em;
+  
+}
+
+.box-menu {
+  padding: .8em;  
+}
+
+.box-menu a {
+  font-size: .8em;
+}
+
+.box-menu a:hover {
+  color: #ffba00;
+}
+
+/**
+ * 1. Use grid.
+ * 2. Gutter space.
+ * 3. Center at large sizes.
+ * 4. Set maximum width.
+ */
+
+ .content {
+    display: grid; /* 1 */
+    grid-gap: 2em; /* 2 */
+    margin: 1.5em auto; /* 2, 3 */
+    max-width: 64em; /* 4 */
+    padding: 0 2em; /* 2 */
+    color: white; 
+  }
+  
+  /**
+   * Sidebar inherits grid display styles and gap size. This will be simpler once `display: subgrid` is supported!
+   */
+  
+  .sidebar {
+    display: inherit;
+    grid-gap: inherit;
+  }
+  
+  /**
+   * At slightly wider sizes, show sidebar elements side by side (each taking up half the space, minus gutter gap and stuff).
+   */
+  
+  @media (min-width: 720px) and (max-width: 1279px) {
+    body {
+      background-image: url(./res/images/background-1366.png);                
+    }
+
+    header h1 {
+      font-family: 'Monsieur La Doulaise', 'Arial', 'Sans Serif';
+      font-size: 6em;
+      padding: 0 1.5em ;
+    }
+
+    h2 {
+      font-size: 1.1em;
+    }
+
+    nav a {
+      font-size: 1em;
+    }
+
+    .box h2{
+      padding: .3em .6em;
+      font-size: .8em;
+    
+  }
+  
+  .box-menu {
+    padding: .8em;
+    font-size: .5em;
+  }
+
+    .sidebar {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /**
+   * At even wider sizes…
+   */
+  
+  @media (min-width: 1280px) {
+    
+    body {
+        background-image: url(./res/images/background-1920.png);     
+        font-size: 14pt;           
+    }
+
+    header h1 {
+      font-family: 'Monsieur La Doulaise', 'Arial', 'Sans Serif';
+      font-size: 7em;
+      padding: .4em 1.5em 0 1.4em ;
+    }
+
+    h2 {
+      font-size: 1.1em;
+    }
+    
+    nav {
+      margin-bottom: 3em;
+
+    }
+    
+    nav a {
+      font-size: 1.1em;
+    }
+
+    .box h2 {
+      padding: .4em 1em;
+      font-size: 1em;
+    }
+
+    .box-menu {
+      padding: 1em;
+      font-size: 1em;
+    }
+    /**
+     * Establish one primary (⅔) column and one secondary (⅓) column.
+     */
+    
+    .content {
+      grid-template-columns: 2fr 1fr;
+    }
+    
+    /**
+     * 1. Automatically create sidebar rows that are as short as their content will allow.
+     * 2. Make this element span 3 rows, allowing prose elements to flow to its left.
+     */
+    
+    .sidebar {
+      grid-auto-rows: min-content; /* 1 */
+      grid-row: span 3; /* 2 */
+    }
+  }
+
+
