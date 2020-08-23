@@ -58,14 +58,16 @@
     margin: 0;
     padding: 0;
     font-family: 'Alegreya Sans','Trebuchet MS',  sans-serif;
+    box-sizing: border-box;
     
 }
 
 body {
   background-attachment: fixed;
   background-size: cover;
-  font-size: 14pt;
+  font-size: 15pt;
   background-image: url(./res/images/background-640.png);
+  color: #550055;
 }
 
 
@@ -89,15 +91,11 @@ ul {
 a {
   text-decoration: none;
   font-weight: bolder;
-  color: #FFFADE;
+  color: #550055;
 }
 
 a:hover {  
-  background: 
-  linear-gradient(45deg, rgba(85,0,85,1) 0%, rgba(255,186,0,1) 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-color: #ffba00;
+  
 }
 
 p {
@@ -110,7 +108,7 @@ p {
 h2 {
   font-size: 1em;
   margin-bottom: .3em;
-  color: #ffba00;
+  color: #550055;
 }
 
 header h1 {
@@ -131,7 +129,6 @@ nav {
     text-align: left;
 }
 nav .burger-menu {
-  color: #550055;
   font-style: normal;
   font-weight: bolder; 
 }
@@ -168,17 +165,18 @@ nav a:hover {
   padding: .3em 1.1em;
   
 }
-
 .box-menu {
   padding: .7em 1.1em;  
 }
 
 .box-menu a {
   font-size: .8em;
+  color: #ffba00;
 }
 
 .box-menu a:hover {
   color: #ffba00;
+  border-bottom: 3px solid #ffba00;
 }
 
 /**
@@ -192,11 +190,29 @@ nav a:hover {
     display: grid; /* 1 */
     grid-gap: 2em; /* 2 */
     margin: 0 auto; /* 2, 3 */
-    max-width: 50em; /* 4 */
+    max-width: 60em; /* 4 */
     padding: 0 2em; /* 2 */
-    color: #FFFADE;
+    color: #550055;
+    margin-bottom: 2em;    
   }
-  
+
+  .section a:hover {
+    background: linear-gradient(90deg, rgba(255,90,100,1) 0%, rgba(85,0,85,1) 50%, rgba(255,186,0,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #ffba00;
+  }
+  .section {
+    border-radius: .3em;
+    padding: 1em;
+    /* background: #FFF8E5;  */
+    background: rgba( 255, 255, 255, .7); 
+  }
+  .section.discography {
+    background: rgba( 255, 186, 0, .7); 
+  }
+
   /**
    * Sidebar inherits grid display styles and gap size. This will be simpler once `display: subgrid` is supported!
    */
@@ -205,7 +221,28 @@ nav a:hover {
     display: inherit;
     grid-gap: inherit;
   }
+  .footer {
+    background-color: rgba( 255, 186, 0, .8);    
+    padding: 1em;
+  }
   
+
+  /* Design for the discography- and members sections.  */
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .flex-item{
+    margin: .3em;
+    padding: .3em;
+    border: 1px solid #fff;
+    flex: 0 1 auto;
+    width: 200px;
+    height: 200px;
+  }
+
   /**
    * At slightly wider sizes, show sidebar elements side by side (each taking up half the space, minus gutter gap and stuff).
    */
@@ -249,11 +286,12 @@ nav a:hover {
 
     .box h2 {
       padding: .4em 1em;   
-      font-size: 1em;
     }
 
     .box-menu {
       padding: 1em;
+      color: #ffba00;
+      
     }
     .sidebar {
       grid-template-columns: 1fr 1fr;
@@ -305,12 +343,11 @@ nav a:hover {
     
     
     .box-menu {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
 
     .box h2 {
       padding: .4em 1em;
-      font-size: 1.2rem;
     }
 
     /**

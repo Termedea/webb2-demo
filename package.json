@@ -1,0 +1,23 @@
+{
+  "name": "webb2-tesseract_fansite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Termedea/webb2-tesseract_fansite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Termedea/webb2-tesseract_fansite/issues"
+  },
+  "homepage": "https://github.com/Termedea/webb2-tesseract_fansite#readme",
+  "dependencies": {
+    "loadsh": "0.0.4",
+    "sticky-js": "^1.3.0"
+  }
+}
