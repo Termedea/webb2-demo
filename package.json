@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Termedea/webb2-tesseract_fansite#readme",
   "dependencies": {
-    "smooth-scroll": "^16.1.3"
+    "lodash": "^4.17.20"
   }
 }

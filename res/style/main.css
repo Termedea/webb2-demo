@@ -52,7 +52,9 @@
   font-display: swap;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -65,18 +67,30 @@
 body {
   background-attachment: fixed;
   background-size: cover;
-  font-size: 15pt;
+  font-size: 14pt;
   background-image: url(../images/background-640.png);
   color: #550055;
 }
-
-
-h1, h2, h3, h4 {
+h1 {
   font-weight: normal;
-  margin: 0;
-  padding: 0;
-  font-size: 1em;
+}
+h2, h3, h4 {
+  font-weight: normal;
   font-family: 'Montserrat Alternates', Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: .6em;;
+  padding: 0;
+  font-size: 1.4rem;
+  color: #ffba00;
+  
+}
+
+h3 {
+  font-weight: normal;
+  margin: 1em 0 .5em 0;
+  font-size: 1em;
 }
 
 header {
@@ -91,22 +105,14 @@ ul {
 a {
   text-decoration: none;
   font-weight: bolder;
-  color: #550055;
+  color: #FFF8E5;
 }
-
 
 
 p {
   margin-bottom: .5em;
-  font-size: .8em;
-  line-height: 1.7em;
+  line-height: 1.5em;
   
-}
-
-h2 {
-  font-size: 1em;
-  margin-bottom: .3em;
-  color: #550055;
 }
 
 header h1 {
@@ -125,7 +131,9 @@ nav {
     padding: 1em;
     width: 10em;    
     text-align: left;
+
 }
+
 nav .burger-menu {
   font-style: normal;
   font-weight: bolder; 
@@ -148,6 +156,11 @@ nav a:hover {
   color: #550055;
   border-bottom: 3px solid #550055;
 } 
+
+.active {
+  border-bottom: 3px solid #550055;
+}
+
 .box {
   
   border-radius: .3em;
@@ -164,16 +177,16 @@ nav a:hover {
   padding: .3em 1.1em;
   
 }
-.box-menu {
+.box-list {
   padding: .7em 1.1em;  
 }
 
-.box-menu a {
+.box-list a {
   font-size: .8em;
   color: #ffba00;
 }
 
-.box-menu a:hover {
+.box-list a:hover {
   color: #ffba00;
   border-bottom: 3px solid #ffba00;
 }
@@ -189,57 +202,66 @@ nav a:hover {
     display: grid; /* 1 */
     grid-gap: 2em; /* 2 */
     margin: 0 auto; /* 2, 3 */
-    max-width: 60em; /* 4 */
+    max-width: 70em; /* 4 */
     padding: 0 2em; /* 2 */
-    color: #550055;
-    margin-bottom: 2em;    
+    color: #FFF8E5;
+    margin-bottom: 2em;   
   }
 
-  .section a:hover {
-    background: linear-gradient(90deg, rgba(255,90,100,1) 0%, rgba(85,0,85,1) 50%, rgba(255,186,0,1) 100%);
+  .page-section a:hover {
+
+    background: linear-gradient(90deg, rgba(85,0,85,1) 0%, rgba(255,186,0,1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #ffba00;
   }
-  .section {
-    border-radius: .3em;
-    padding: 1em;
-    /* background: #FFF8E5;  */
-    background: rgba( 255, 255, 255, .7); 
-  }
-  .section.discography {
-    background: rgba( 255, 186, 0, .7); 
-  }
+
+
 
   /**
    * Sidebar inherits grid display styles and gap size. This will be simpler once `display: subgrid` is supported!
-   */
-  
+   */  
   .sidebar {
+    margin-top: 60px;
     display: inherit;
     grid-gap: inherit;
   }
+
   .footer {
-    background-color: rgba( 255, 186, 0, .8);    
+    background-color: rgba( 255, 186, 0, .1);    
     padding: 1em;
+    color: #FFF8E5;
   }
   
 
-  /* Design for the discography- and members sections.  */
+  /* Design for the history- and members sections.  */
   .flex-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: row wrap;    
+    gap: 2em;
+  }
+  .history .flex-container {
+    justify-content: space-between; /* distribueras från vänster. */
   }
 
-  .flex-item{
-    margin: .3em;
+  .members .flex-container {
+    justify-content: space-evenly; /* distribueras från mitten. */
+  }
+
+  .flex-item{    
     padding: .3em;
     border: 1px solid #fff;
     flex: 0 1 auto;
-    width: 200px;
-    height: 200px;
+  }
+  .history .flex-item {
+    
+    width: 150px; 
+    height: 150px; 
+  }
+  .members .flex-item {
+    width: 250px;
+    height: 250px;
   }
 
   /**
@@ -248,7 +270,7 @@ nav a:hover {
   @media (min-width: 900px)  {
     body {
       background-image: url(../images/background-1366.png);           
-      font-size: 17pt;     
+      font-size: 14pt;     
     }
 
     header h1 {
@@ -261,10 +283,17 @@ nav a:hover {
       display: block;
       width: 100%;      
       text-align: right;
-      font-size: .8em;
-      background-color: rgba( 255, 186, 0, .7);    
+      background-color: rgba( 255, 186, 0, .6);    
       position: fixed;
       top: 0;
+      /* transition: background-color 0.5s ease; */
+      transition: all 0.2s ease;
+    }
+
+    .scrolled {
+      background-color: rgba( 255, 186, 0, 1);  
+      font-size: .8em;
+      padding: .8em;
     }
 
     nav .burger-menu {
@@ -275,20 +304,21 @@ nav a:hover {
       margin-right: 1em;
     }
     nav li {
-      display: inline;
-      padding: 1em;   
+      display: inline;      
     }
     
     h2 {
-      font-size: 1.1em;
+      font-size: 1.5em;
+      margin-top: 60px;
     }
-
 
     .box h2 {
       padding: .4em 1em;   
+      font-size: 1em;
+      margin-top: 0;
     }
 
-    .box-menu {
+    .box-list {
       padding: 1em;
       color: #ffba00;
       
@@ -296,7 +326,6 @@ nav a:hover {
     .sidebar {
       grid-template-columns: 1fr 1fr;
     }
-
     
   }
   
@@ -308,7 +337,7 @@ nav a:hover {
     
     body {
         background-image: url(../images/background-1920.png);     
-        font-size: 18pt;           
+        font-size: 15pt;           
     }
     
     header h1 {
