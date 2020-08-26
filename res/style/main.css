@@ -244,28 +244,19 @@ Content
 
 
 /******************************
-History- och membersektionerna
+Discography- och membersektionerna
 ******************************/
   .flex-container { /*Boxarna visas i en flexlayout. */
     display: flex;
     flex-flow: row wrap; /* De byggs på radvis. När de når slutet på aktuell bredd, börjar en ny rad. */
+    justify-content: space-evenly; /* växer från mitten och boxarna har jämnt avstånd till varandra. */
     gap: 2em; /* 2em mellan boxarna */
     
   }
-  .history .flex-container {
-    justify-content: space-between; /* växer från vänster och får jämnt mellanrum mellan start och slut av container.  */
-  }
 
-  .members .flex-container {
-    justify-content: space-evenly; /* växer från mitten och boxarna har jämnt avstånd till varandra. */
-  }
-
-  .flex-item{    
+   .flex-item {
     box-sizing: content-box; /* Jag vill inte att border ska räknas in i slutgiltiga storleken, eftersom jag vet att både boxen och bilderna ska vara 200px stora (förut har vi sagt att vi vill det, när vi gör layouter) */
     border: 1px solid #FFF8E5;
-    
-  }
-  .members .flex-item {
     width: 200px;
     height: 200px;
     position: relative; /* för att hover-effekten ska kunna placera sig över bilden. */
@@ -273,16 +264,20 @@ History- och membersektionerna
   }
 
   /** Effekt med bakgrund och text när man hovrar över bilden **/
-  .members .flex-item > .overlay {
+   .flex-item > .overlay {
     opacity: 0;
-    transition: opacity ease-out .4s;
+    transition: opacity ease-out .2s;
   }
 
-  .members .flex-item span {
+   .flex-item .details {
     display: none;
   }
+  .flex-item .details h3 {
+    font-style: italic;
+  }
 
-  .members .flex-item:hover > .overlay {
+
+   .flex-item:hover > .overlay {
     opacity: 1; 
     position: absolute; 
     bottom: 0;
@@ -293,7 +288,7 @@ History- och membersektionerna
     
   }
 
-  .members .flex-item:hover span {
+  .flex-item:hover .details {
     position: absolute;
     text-align: center;
     bottom: 0;
@@ -304,10 +299,8 @@ History- och membersektionerna
     color: #FFF8E5;
   }
 
-  .history .flex-item {    
-    width: 200px;  
-    height: min-content;
-  }
+
+
 
 .footer {
   background-color: rgba( 255, 186, 0, .1);    
@@ -334,8 +327,7 @@ Stil för skärmar som är mer än 900px breda.
     nav {
       display: block;
       width: 100%;      
-      text-align: right;
-      background-color: rgba( 255, 186, 0, 1);    
+      text-align: right; 
       position: fixed;
       top: 0;
       transition: all 0.2s ease;
