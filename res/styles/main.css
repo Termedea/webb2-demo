@@ -266,7 +266,8 @@ Discography- och membersektionerna
   /** Effekt med bakgrund och text när man hovrar över bilden **/
    .flex-item > .overlay {
     opacity: 0;
-    transition: opacity ease-out .2s;
+    height: 0;
+    transition: opacity, height ease-out .2s;
   }
 
    .flex-item .details {
@@ -284,7 +285,7 @@ Discography- och membersektionerna
     left: 0;
     width: 200px;
     height: 200px;
-    background: linear-gradient(180deg, rgba(255,186,0,.2) 0%, rgba(85,0,85,.9) 90%);
+    background: linear-gradient(180deg, rgba(255,186,0,.4) 0%, rgba(85,0,85,.9) 90%);
     
   }
 
