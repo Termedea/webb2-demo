@@ -1,8 +1,4 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-(function (global){
-!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{("undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this).basicLightbox=e()}}((function(){return function e(n,t,o){function r(c,u){if(!t[c]){if(!n[c]){var s="function"==typeof require&&require;if(!u&&s)return s(c,!0);if(i)return i(c,!0);var a=new Error("Cannot find module '"+c+"'");throw a.code="MODULE_NOT_FOUND",a}var l=t[c]={exports:{}};n[c][0].call(l.exports,(function(e){return r(n[c][1][e]||e)}),l,l.exports,e,n,t,o)}return t[c].exports}for(var i="function"==typeof require&&require,c=0;c<o.length;c++)r(o[c]);return r}({1:[function(e,n,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.create=t.visible=void 0;var o=function(e){var n=arguments.length>1&&void 0!==arguments[1]&&arguments[1],t=document.createElement("div");return t.innerHTML=e.trim(),!0===n?t.children:t.firstChild},r=function(e,n){var t=e.children;return 1===t.length&&t[0].tagName===n},i=function(e){return null!=(e=e||document.querySelector(".basicLightbox"))&&!0===e.ownerDocument.body.contains(e)};t.visible=i;t.create=function(e,n){var t=function(e,n){var t=o('\n\t\t<div class="basicLightbox '.concat(n.className,'">\n\t\t\t<div class="basicLightbox__placeholder" role="dialog"></div>\n\t\t</div>\n\t')),i=t.querySelector(".basicLightbox__placeholder");e.forEach((function(e){return i.appendChild(e)}));var c=r(i,"IMG"),u=r(i,"VIDEO"),s=r(i,"IFRAME");return!0===c&&t.classList.add("basicLightbox--img"),!0===u&&t.classList.add("basicLightbox--video"),!0===s&&t.classList.add("basicLightbox--iframe"),t}(e=function(e){var n="string"==typeof e,t=e instanceof HTMLElement==!0;if(!1===n&&!1===t)throw new Error("Content must be a DOM element/node or string");return!0===n?Array.from(o(e,!0)):"TEMPLATE"===e.tagName?[e.content.cloneNode(!0)]:Array.from(e.children)}(e),n=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(null==(e=Object.assign({},e)).closable&&(e.closable=!0),null==e.className&&(e.className=""),null==e.onShow&&(e.onShow=function(){}),null==e.onClose&&(e.onClose=function(){}),"boolean"!=typeof e.closable)throw new Error("Property `closable` must be a boolean");if("string"!=typeof e.className)throw new Error("Property `className` must be a string");if("function"!=typeof e.onShow)throw new Error("Property `onShow` must be a function");if("function"!=typeof e.onClose)throw new Error("Property `onClose` must be a function");return e}(n)),c=function(e){return!1!==n.onClose(u)&&function(e,n){return e.classList.remove("basicLightbox--visible"),setTimeout((function(){return!1===i(e)||e.parentElement.removeChild(e),n()}),410),!0}(t,(function(){if("function"==typeof e)return e(u)}))};!0===n.closable&&t.addEventListener("click",(function(e){e.target===t&&c()}));var u={element:function(){return t},visible:function(){return i(t)},show:function(e){return!1!==n.onShow(u)&&function(e,n){return document.body.appendChild(e),setTimeout((function(){requestAnimationFrame((function(){return e.classList.add("basicLightbox--visible"),n()}))}),10),!0}(t,(function(){if("function"==typeof e)return e(u)}))},close:c};return u}},{}]},{},[1])(1)}));
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],2:[function(require,module,exports){
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -10,7 +6,7 @@ var Symbol = root.Symbol;
 
 module.exports = Symbol;
 
-},{"./_root":7}],3:[function(require,module,exports){
+},{"./_root":6}],2:[function(require,module,exports){
 var Symbol = require('./_Symbol'),
     getRawTag = require('./_getRawTag'),
     objectToString = require('./_objectToString');
@@ -40,7 +36,7 @@ function baseGetTag(value) {
 
 module.exports = baseGetTag;
 
-},{"./_Symbol":2,"./_getRawTag":5,"./_objectToString":6}],4:[function(require,module,exports){
+},{"./_Symbol":1,"./_getRawTag":4,"./_objectToString":5}],3:[function(require,module,exports){
 (function (global){
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
@@ -48,7 +44,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 module.exports = freeGlobal;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],5:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 var Symbol = require('./_Symbol');
 
 /** Used for built-in method references. */
@@ -96,7 +92,7 @@ function getRawTag(value) {
 
 module.exports = getRawTag;
 
-},{"./_Symbol":2}],6:[function(require,module,exports){
+},{"./_Symbol":1}],5:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -120,7 +116,7 @@ function objectToString(value) {
 
 module.exports = objectToString;
 
-},{}],7:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `self`. */
@@ -131,7 +127,7 @@ var root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
 
-},{"./_freeGlobal":4}],8:[function(require,module,exports){
+},{"./_freeGlobal":3}],7:[function(require,module,exports){
 var isObject = require('./isObject'),
     now = require('./now'),
     toNumber = require('./toNumber');
@@ -324,7 +320,7 @@ function debounce(func, wait, options) {
 
 module.exports = debounce;
 
-},{"./isObject":9,"./now":12,"./toNumber":14}],9:[function(require,module,exports){
+},{"./isObject":8,"./now":11,"./toNumber":13}],8:[function(require,module,exports){
 /**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -357,7 +353,7 @@ function isObject(value) {
 
 module.exports = isObject;
 
-},{}],10:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -388,7 +384,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],11:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 var baseGetTag = require('./_baseGetTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -419,7 +415,7 @@ function isSymbol(value) {
 
 module.exports = isSymbol;
 
-},{"./_baseGetTag":3,"./isObjectLike":10}],12:[function(require,module,exports){
+},{"./_baseGetTag":2,"./isObjectLike":9}],11:[function(require,module,exports){
 var root = require('./_root');
 
 /**
@@ -444,7 +440,7 @@ var now = function() {
 
 module.exports = now;
 
-},{"./_root":7}],13:[function(require,module,exports){
+},{"./_root":6}],12:[function(require,module,exports){
 var debounce = require('./debounce'),
     isObject = require('./isObject');
 
@@ -515,7 +511,7 @@ function throttle(func, wait, options) {
 
 module.exports = throttle;
 
-},{"./debounce":8,"./isObject":9}],14:[function(require,module,exports){
+},{"./debounce":7,"./isObject":8}],13:[function(require,module,exports){
 var isObject = require('./isObject'),
     isSymbol = require('./isSymbol');
 
@@ -583,21 +579,22 @@ function toNumber(value) {
 
 module.exports = toNumber;
 
-},{"./isObject":9,"./isSymbol":11}],15:[function(require,module,exports){
+},{"./isObject":8,"./isSymbol":10}],14:[function(require,module,exports){
 /*** Bibliotek ***/
 var throttle = require("lodash/throttle");
 var debounce = require("lodash/debounce");
-var basicLightbox = require("basiclightbox");
 
 /*** Variabler ***/
-var pageSection = document.querySelectorAll(".page-section");
 var navMainMenu = document.querySelector("nav.main-menu");
 var scrollClass = "scrolled";
-var browserHeight = window.innerHeight;
+var historyElement = document.querySelectorAll(".history .flex-item");
+console.log(historyElement);
 
 /* Events */
 window.addEventListener("scroll", throttle(scrolling, 300)); //Anropar funktionen "scrolling" varje 200:e ms (skit i throttle, det är något smart som någon annan har gjort)
-
+historyElement.addEventListener("click", function() {
+    console.log("clicked");
+});
 
 /*** Egna funktioner ***/
 
@@ -613,5 +610,7 @@ function scrolling() {
 
 /** Kanske gör något kul med diskografi-popup **/
 
-
-},{"basiclightbox":1,"lodash/debounce":8,"lodash/throttle":13}]},{},[15]);
+function popup () {
+    console.log("clicked");
+}
+},{"lodash/debounce":7,"lodash/throttle":12}]},{},[14]);

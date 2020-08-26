@@ -1,3 +1,7 @@
+/******************************
+Custom fonter
+*******************************/
+
 @font-face {
   font-family: 'Alegreya Sans';
   src: url('../fonts/AlegreyaSans-Italic.woff2') format('woff2'),
@@ -52,6 +56,16 @@
   font-display: swap;
 }
 
+/******************************
+Brytpunkter: 
+  Under 900px = Telefoner etc. 
+  Över 900px = Mellanstora skärmar, såsom större telefoner och surfplattor. 
+  Över 1300px = Laptop-/datorskärmar.
+*******************************/
+
+/******************************
+Gemensam stil eller skärmnar som är under 900px breda.(mobile first)
+******************************/
 html {
   scroll-behavior: smooth;
 }
@@ -68,23 +82,22 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-size: 14pt;
-  background-image: url(../images/background-640.png);
-  color: #550055;
+  background-image: url(../images/background-640.png); /* Den minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */
 }
-h1 {
+
+h1, h2, h3, h4 {
   font-weight: normal;
 }
 h2, h3, h4 {
-  font-weight: normal;
   font-family: 'Montserrat Alternates', Arial, sans-serif;
 }
 
+
 h2 {
-  margin-bottom: .6em;;
   padding: 0;
   font-size: 1.4rem;
-  color: #ffba00;
-  
+  color: #ffba00;  
+  margin-bottom: 1.3em;
 }
 
 h3 {
@@ -93,10 +106,7 @@ h3 {
   font-size: 1em;
 }
 
-header {
-    text-align: right;
-    color: #ffba00;
-}
+
 
 ul {
   list-style-type: none;
@@ -104,15 +114,38 @@ ul {
 
 a {
   text-decoration: none;
-  font-weight: bolder;
-  color: #FFF8E5;
+  font-weight: bold;
+  color: #ffba00;
+  display: inline-block; 
 }
 
+/******************************
+Länkeffekt (Överkurs)
+******************************/
 
-p {
-  margin-bottom: .5em;
-  line-height: 1.5em;
-  
+a::after { /* Vi använder ett s.k. "pseudoelement" för att skapa innehåll efter (eller före) något, utan att lägga till extra html. Vi kan kalla det ett hemligt element */
+  /* Content "" behövs för att elementet ska existera */
+  content: "";
+  display: block;
+  /*Än så länge har det ingen width. Det är det vi ska ändra när vi hovrar. Linjen är 2px hög. */
+  width: 0;
+  height: 2px;
+  /* Linjen har en övertoning */
+  background-image: linear-gradient(270deg, rgba(85,0,85,1) 0%,  rgba(255,0,85,1) 50%, rgba(255,186,0,1) 100%);
+  /* När vi hovrar kommer vi animera egenskapen "width" och animeringen ska ta 0.2s. */
+  transition: width .2s;
+}
+
+a:hover::after {
+width: 100%; /* När vi hovrar över länken växer bredden på det hemliga elementet från 0% brett till 100% brett över 0.2 sekunder.  */
+}
+
+/******************************
+Header
+******************************/
+header {
+  text-align: right;
+  color: #ffba00;
 }
 
 header h1 {
@@ -123,6 +156,14 @@ header h1 {
   padding-bottom: -1em;
   margin-top: 1.3em;
 }
+
+
+
+/******************************
+Huvudmeny
+******************************/
+/* Vi sätter övergripande stil på huvudmenyn här, men eftersom vi tänker mobilt först och den inte kommer att se riktigt lika ut, 
+börjar vi med att sätta "display: none" på den. Vi kommer att ändra detta till större storlekar senare. */
 nav {
     /* Hamburgermeny */
     /* display: inline-block; */
@@ -131,6 +172,7 @@ nav {
     padding: 1em;
     width: 10em;    
     text-align: left;
+    z-index: 999;
 
 }
 
@@ -149,20 +191,34 @@ nav a {
   text-decoration: none;
   color: #550055;
   font-family: 'Montserrat Alternates', Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;  
+  display: inline-block;
 }
 
-nav a:hover {  
-  color: #550055;
-  border-bottom: 3px solid #550055;
-} 
+/******************************
+Content
+******************************/
 
-.active {
-  border-bottom: 3px solid #550055;
+/** Stil för content, som har display: grid, för att vi ska kunna placera sidebar snyggt i alla storlekar. Vid den minsta skärmstorleken ligger allt ovanpå varandra, så detta märks inte än.  **/
+.content {
+  display: grid;
+  grid-gap: 2em; 
+  margin: 0 auto; 
+  max-width: 70em; /* Bredden på container blir aldrig större än 70em. Detta för att vi ska ha den så stor som möjligt på mindre skärmar, men ändå ha den smalare och centrerad i full bredd. */
+  padding: 0 2em; 
+  color: #FFF8E5;
+  margin-bottom: 2em;   
 }
 
-.box {
-  
+.sidebar {    
+  /* Sidebar behöver också bete sig som en grid, en "undergrid" till content. Det syns inte nu, eftersom de bara ligger under varandra, men de kommer att ligga 
+  bredvid varandra när man använder en mellanstor skärm */
+  display: inherit;
+  grid-gap: inherit;
+}
+
+/* Design av boxarna i sidebar. */
+.box {  
   border-radius: .3em;
   border-bottom-right-radius: .3em;
   font-size: 1.3rem;  
@@ -175,6 +231,7 @@ nav a:hover {
   background: #ffba00;
   color: #550055;
   padding: .3em 1.1em;
+  margin-bottom: 0;
   
 }
 .box-list {
@@ -183,93 +240,88 @@ nav a:hover {
 
 .box-list a {
   font-size: .8em;
-  color: #ffba00;
 }
 
-.box-list a:hover {
-  color: #ffba00;
-  border-bottom: 3px solid #ffba00;
-}
 
-/**
- * 1. Use grid.
- * 2. Gutter space.
- * 3. Center at large sizes.
- * 4. Set maximum width.
- */
-
- .content {
-    display: grid; /* 1 */
-    grid-gap: 2em; /* 2 */
-    margin: 0 auto; /* 2, 3 */
-    max-width: 70em; /* 4 */
-    padding: 0 2em; /* 2 */
-    color: #FFF8E5;
-    margin-bottom: 2em;   
-  }
-
-  .page-section a:hover {
-
-    background: linear-gradient(90deg, rgba(85,0,85,1) 0%, rgba(255,186,0,1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #ffba00;
-  }
-
-
-
-  /**
-   * Sidebar inherits grid display styles and gap size. This will be simpler once `display: subgrid` is supported!
-   */  
-  .sidebar {
-    margin-top: 60px;
-    display: inherit;
-    grid-gap: inherit;
-  }
-
-  .footer {
-    background-color: rgba( 255, 186, 0, .1);    
-    padding: 1em;
-    color: #FFF8E5;
-  }
-  
-
-  /* Design for the history- and members sections.  */
-  .flex-container {
+/******************************
+History- och membersektionerna
+******************************/
+  .flex-container { /*Boxarna visas i en flexlayout. */
     display: flex;
-    flex-flow: row wrap;    
-    gap: 2em;
+    flex-flow: row wrap; /* De byggs på radvis. När de når slutet på aktuell bredd, börjar en ny rad. */
+    gap: 2em; /* 2em mellan boxarna */
+    
   }
   .history .flex-container {
-    justify-content: space-between; /* distribueras från vänster. */
+    justify-content: space-between; /* växer från vänster och får jämnt mellanrum mellan start och slut av container.  */
   }
 
   .members .flex-container {
-    justify-content: space-evenly; /* distribueras från mitten. */
+    justify-content: space-evenly; /* växer från mitten och boxarna har jämnt avstånd till varandra. */
   }
 
   .flex-item{    
-    padding: .3em;
-    border: 1px solid #fff;
-    flex: 0 1 auto;
-  }
-  .history .flex-item {
+    box-sizing: content-box; /* Jag vill inte att border ska räknas in i slutgiltiga storleken, eftersom jag vet att både boxen och bilderna ska vara 200px stora (förut har vi sagt att vi vill det, när vi gör layouter) */
+    border: 1px solid #FFF8E5;
     
-    width: 150px; 
-    height: 150px; 
   }
   .members .flex-item {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
+    position: relative; /* för att hover-effekten ska kunna placera sig över bilden. */
+    transition: all ease-in-out 0.3s;
   }
 
-  /**
-   * At slightly wider sizes, show sidebar elements side by side (each taking up half the space, minus gutter gap and stuff).
-   */
+  /** Effekt med bakgrund och text när man hovrar över bilden **/
+  .members .flex-item > .overlay {
+    opacity: 0;
+    transition: opacity ease-out .4s;
+  }
+
+  .members .flex-item span {
+    display: none;
+  }
+
+  .members .flex-item:hover > .overlay {
+    opacity: 1; 
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(255,186,0,.2) 0%, rgba(85,0,85,.9) 90%);
+    
+  }
+
+  .members .flex-item:hover span {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    display: inline;
+    font-size: .8em;
+    padding: .8em;
+    color: #FFF8E5;
+  }
+
+  .history .flex-item {    
+    width: 200px;  
+    height: min-content;
+  }
+
+.footer {
+  background-color: rgba( 255, 186, 0, .1);    
+  padding: 1em;
+  color: #FFF8E5;
+}
+
+/******************************
+Stil för skärmar som är mer än 900px breda. 
+******************************/
   @media (min-width: 900px)  {
+    
     body {
-      background-image: url(../images/background-1366.png);           
+      background-image: url(../images/background-1366.png);  /* Den minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */         
       font-size: 14pt;     
     }
 
@@ -283,10 +335,9 @@ nav a:hover {
       display: block;
       width: 100%;      
       text-align: right;
-      background-color: rgba( 255, 186, 0, .6);    
+      background-color: rgba( 255, 186, 0, 1);    
       position: fixed;
       top: 0;
-      /* transition: background-color 0.5s ease; */
       transition: all 0.2s ease;
     }
 
@@ -325,15 +376,15 @@ nav a:hover {
     }
     .sidebar {
       grid-template-columns: 1fr 1fr;
+      margin-top: 60px;
     }
     
   }
   
-  /**
-   * At even wider sizes…
-   */
-  
-  @media (min-width: 1366px) {
+/******************************
+Stil för skärmar som är mer än 1366px breda. 
+******************************/
+  @media (min-width: 1200px) {
     
     body {
         background-image: url(../images/background-1920.png);     
@@ -367,3 +418,12 @@ nav a:hover {
   }
 
 
+/**
+  Trevlig texteffekt
+
+    background-image: linear-gradient(90deg, rgba(85,0,85,1) 0%,  rgba(255,0,85,1) 50%, rgba(255,186,0,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #550055; 
+**/

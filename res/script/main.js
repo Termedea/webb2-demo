@@ -3,20 +3,20 @@ var throttle = require("lodash/throttle");
 var debounce = require("lodash/debounce");
 
 /*** Variabler ***/
-var pageSection = document.querySelectorAll(".page-section");
 var navMainMenu = document.querySelector("nav.main-menu");
 var scrollClass = "scrolled";
-var browserHeight = window.innerHeight;
+var historyElement = document.querySelectorAll(".history .flex-item");
+console.log(historyElement);
 
 /* Events */
 window.addEventListener("scroll", throttle(scrolling, 300)); //Anropar funktionen "scrolling" varje 200:e ms (skit i throttle, det är något smart som någon annan har gjort)
-window.addEventListener("resize", debounce(function(){
-    browserHeight = window.innerHeight;
-}), 333); //Ser till att browserHeight-variabeln uppdateras då och då (skit i debouce, det är något smart som någon annan har gjort)
-
-
+historyElement.addEventListener("click", function() {
+    console.log("clicked");
+});
 
 /*** Egna funktioner ***/
+
+/** Ändrar utseende på menyn efter viss scroll **/
 function scrolling() {
     if (window.scrollY > 100) {
         navMainMenu.classList.add(scrollClass);
@@ -24,7 +24,10 @@ function scrolling() {
     } else {
         navMainMenu.classList.remove(scrollClass);
     }
-    
-        
 }
 
+/** Kanske gör något kul med diskografi-popup **/
+
+function popup () {
+    console.log("clicked");
+}
