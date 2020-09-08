@@ -120,7 +120,7 @@ a {
 }
 
 /******************************
-Länkeffekt (Överkurs)
+Länkeffekt
 ******************************/
 
 a::after { /* Vi använder ett s.k. "pseudoelement" för att skapa innehåll efter (eller före) något, utan att lägga till extra html. Vi kan kalla det ett hemligt element */
@@ -150,7 +150,7 @@ header {
 
 header h1 {
   font-family: 'Monsieur La Doulaise', 'Arial', 'Sans Serif';
-  font-size: 6em;
+  font-size: 4em;
   text-align: right; 
   padding-right: 1.1em;
   padding-bottom: -1em;
@@ -310,18 +310,17 @@ Discography- och membersektionerna
 }
 
 /******************************
-Stil för skärmar som är mer än 900px breda. 
+Stil för skärmar som är mer än 640px breda. 
 ******************************/
-  @media (min-width: 900px)  {
+  @media (min-width: 640px)  {
     
     body {
-      background-image: url(../images/background-1366.png);  /* Den minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */         
+      background-image: url(../images/background-1280.png);  /* Den nästminsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */         
       font-size: 14pt;     
     }
 
     header h1 {
-      font-family: 'Monsieur La Doulaise', 'Arial', 'Sans Serif';
-      font-size: 5em;
+      font-size: 6em;
       margin-top: 2em;
     }
 
@@ -375,9 +374,9 @@ Stil för skärmar som är mer än 900px breda.
   }
   
 /******************************
-Stil för skärmar som är mer än 1366px breda. 
+Stil för skärmar som är mer än 1200px breda. 
 ******************************/
-  @media (min-width: 1200px) {
+  @media (min-width: 1366px) {
     
     body {
         background-image: url(../images/background-1920.png);     
@@ -385,7 +384,6 @@ Stil för skärmar som är mer än 1366px breda.
     }
     
     header h1 {
-      font-family: 'Monsieur La Doulaise', 'Arial', 'Sans Serif';
       font-size: 6em;
       margin-top: 1.7em;
     }
