@@ -315,7 +315,7 @@ Stil för skärmar som är mer än 640px breda.
   @media (min-width: 640px)  {
     
     body {
-      background-image: url(../images/background-1280.png);  /* Den nästminsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */         
+      background-image: url(../images/background-900.png);  /* Den nästminsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */         
       font-size: 14pt;     
     }
 
