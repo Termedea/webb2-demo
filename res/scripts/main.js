@@ -1,25 +1,45 @@
 /*** Bibliotek ***/
-var throttle = require("lodash/throttle");
-//Vet inte om vi behöver det, men det kan vara bra att ha. 
-var $ = require("jquery");
+
 
 /*** Variabler ***/
-var navMainMenu = $("nav.main-menu");
+var navMainMenu = document.querySelector("nav.main-menu");
 var scrollClass = "scrolled";
 
 
-/* Events */
-$(window).scroll(throttle(scrolling, 300)); //Anropar funktionen "scrolling" varje 200:e ms (skit i throttle, det är något smart som någon annan har gjort)
+window.addEventListener('scroll', throttle(scrolling, 100));
 
-
-/*** Egna funktioner ***/
 
 /** Ändrar utseende på menyn efter viss scroll **/
 function scrolling() {
+
     if (window.scrollY > 100) {
-        navMainMenu.addClass(scrollClass);
+        navMainMenu.classList.add(scrollClass);
 
     } else {
-        navMainMenu.removeClass(scrollClass);
+        navMainMenu.classList.remove(scrollClass);
+    }
+}
+
+/* Lånad funktion för att vi inte ska behöva anropa vår eventhanterare varje gång någon scrollar*/
+/* function throttle(fn, wait) {
+    var time = Date.now();
+    return function() {
+        if ((time + wait - Date.now()) < 0) {
+            fn();
+            time = Date.now();
+        }
+    }
+} */
+
+function throttle(callback, limit) {
+    var waiting = false; // Initially, we're not waiting
+    return function() { // We return a throttled function
+        if (!waiting) { // If we're not waiting
+            callback.apply(this, arguments); // Execute users function
+            waiting = true; // Prevent future invocations
+            setTimeout(function() { // After a period of time
+                waiting = false; // And allow future invocations
+            }, limit);
+        }
     }
 }
