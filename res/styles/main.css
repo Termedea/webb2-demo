@@ -1,434 +1,472 @@
-    /* #region  Fonts */
-    
-    @font-face {
-        font-family: 'Alegreya Sans';
-        src: url('../fonts/AlegreyaSans-Italic.woff2') format('woff2'), url('../fonts/AlegreyaSans-Italic.woff') format('woff');
-        font-weight: normal;
-        font-style: italic;
-        font-display: swap;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat Alternates';
-        src: url('../fonts/MontserratAlternates-Bold.woff2') format('woff2'), url('../fonts/MontserratAlternates-Bold.woff') format('woff');
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-    }
-    
-    @font-face {
-        font-family: 'Montserrat Alternates';
-        src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2'), url('../fonts/MontserratAlternates-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
-    
-    @font-face {
-        font-family: 'Alegreya Sans';
-        src: url('../fonts/AlegreyaSans-Regular.woff2') format('woff2'), url('../fonts/AlegreyaSans-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
-    
-    @font-face {
-        font-family: 'Alegreya Sans';
-        src: url('../fonts/AlegreyaSans-Bold.woff2') format('woff2'), url('../fonts/AlegreyaSans-Bold.woff') format('woff');
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-    }
-    
-    @font-face {
-        font-family: 'Monsieur La Doulaise';
-        src: url('../fonts/MonsieurLaDoulaise-Regular.woff2') format('woff2'), url('../fonts/MonsieurLaDoulaise-Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
-    /* #endregion */
-    /******************************
+/* #region  Fonts */
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("../fonts/AlegreyaSans-Italic.woff2") format("woff2"),
+        url("../fonts/AlegreyaSans-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat Alternates";
+    src: url("../fonts/MontserratAlternates-Bold.woff2") format("woff2"),
+        url("../fonts/MontserratAlternates-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat Alternates";
+    src: url("../fonts/MontserratAlternates-Regular.woff2") format("woff2"),
+        url("../fonts/MontserratAlternates-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("../fonts/AlegreyaSans-Regular.woff2") format("woff2"),
+        url("../fonts/AlegreyaSans-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alegreya Sans";
+    src: url("../fonts/AlegreyaSans-Bold.woff2") format("woff2"),
+        url("../fonts/AlegreyaSans-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monsieur La Doulaise";
+    src: url("../fonts/MonsieurLaDoulaise-Regular.woff2") format("woff2"),
+        url("../fonts/MonsieurLaDoulaise-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* #endregion */
+/******************************
     Brytpunkter: 
     Över 500px = Telefoner etc. 
     Över 700px = Mellanstora skärmar, större telefoner och surfplattor. 
     Över 900px = Vissa designförändringar.
     Över 1100px = Laptop-/datorskärmar.
     *******************************/
-    /******************************
+/******************************
     Gemensam stil eller skärmnar som är under 450px breda.(mobile first)
     ******************************/
-    
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 'Alegreya Sans', 'Trebuchet MS', sans-serif;
-        box-sizing: border-box;
-    }
-    
-    body {
-        background-attachment: fixed;
-        background-size: cover;
-        font-size: 12pt;
-        line-height: 1.8em;
-        /* Den minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */
-        background-image: url(../images/background-640.png);
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4 {
-        font-weight: normal;
-    }
-    
-    h2,
-    h3,
-    h4 {
-        font-family: 'Montserrat Alternates', Arial, sans-serif;
-    }
-    
-    h2 {
-        padding: 0;
-        font-size: 1.4rem;
-        color: #ffba00;
-        margin: 3rem 0 1rem 0;
-    }
-    
-    h3 {
-        font-weight: normal;
-        margin: 1em 0 .5em 0;
-        font-size: 1em;
-    }
-    
-    ul {
-        list-style-type: none;
-    }
-    
-    a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #ffba00;
-        display: inline-block;
-    }
-    /******************************
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Alegreya Sans", "Trebuchet MS", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 12pt;
+    line-height: 1.8em;
+    /* Den minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */
+    background-image: url(../images/background-640.png);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
+h2,
+h3,
+h4 {
+    font-family: "Montserrat Alternates", Arial, sans-serif;
+}
+
+h2 {
+    padding: 0;
+    font-size: 1.4rem;
+    color: #ffba00;
+    margin: 3rem 0 1rem 0;
+}
+
+h3 {
+    font-weight: normal;
+    margin: 1em 0 0.5em 0;
+    font-size: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffba00;
+    display: inline-block;
+}
+/******************************
     Länkeffekt
     ******************************/
-    
-    a::after {
-        /* Vi använder ett s.k. "pseudoelement" för att skapa innehåll efter (eller före) något, utan att lägga till extra html. Vi kan kalla det ett hemligt element */
-        /* Content "" behövs för att elementet ska existera */
-        content: "";
-        display: block;
-        /*Än så länge har det ingen width. Det är det vi ska ändra när vi hovrar. Linjen är 2px hög. */
-        width: 0;
-        height: 2px;
-        /* Linjen har en övertoning */
-        background-image: linear-gradient(270deg, rgba(85, 0, 85, 1) 0%, rgba(255, 0, 85, 1) 50%, rgba(255, 186, 0, 1) 100%);
-        /* När vi hovrar kommer vi animera egenskapen "width" och animeringen ska ta 0.2s. */
-        transition: width .2s;
-    }
-    
-    a:hover::after {
-        width: 100%;
-        /* När vi hovrar över länken växer bredden på det hemliga elementet från 0% brett till 100% brett över 0.2 sekunder.  */
-    }
-    /******************************
+
+a::after {
+    /* Vi använder ett s.k. "pseudoelement" för att skapa innehåll efter (eller före) något, utan att lägga till extra html. Vi kan kalla det ett hemligt element */
+    /* Content "" behövs för att elementet ska existera */
+    content: "";
+    display: block;
+    /*Än så länge har det ingen width. Det är det vi ska ändra när vi hovrar. Linjen är 2px hög. */
+    width: 0;
+    height: 2px;
+    /* Linjen har en övertoning */
+    background-image: linear-gradient(
+        270deg,
+        rgba(85, 0, 85, 1) 0%,
+        rgba(255, 0, 85, 1) 50%,
+        rgba(255, 186, 0, 1) 100%
+    );
+    /* När vi hovrar kommer vi animera egenskapen "width" och animeringen ska ta 0.2s. */
+    transition: width 0.2s;
+}
+
+a:hover::after {
+    width: 100%;
+    /* När vi hovrar över länken växer bredden på det hemliga elementet från 0% brett till 100% brett över 0.2 sekunder.  */
+}
+/******************************
     Header
     ******************************/
-    
-    header {
-        color: #ffba00;
-    }
-    
-    header h1 {
-        font-family: 'Monsieur La Doulaise', 'Arial', 'Sans Serif';
-        text-align: right;
-        font-size: 4em;
-        padding-right: 1.1em;
-        margin-top: 1.3em;
-    }
-    /******************************
+
+header {
+    color: #ffba00;
+}
+
+header h1 {
+    font-family: "Monsieur La Doulaise", "Arial", "Sans Serif";
+    text-align: right;
+    font-size: 4em;
+    padding-right: 1.1em;
+    margin-top: 1.3em;
+}
+/******************************
     Huvudmeny
     ******************************/
-    /* Vi sätter övergripande stil på huvudmenyn här, men eftersom vi tänker mobilt först och den inte kommer att se riktigt lika ut, 
+/* Vi sätter övergripande stil på huvudmenyn här, men eftersom vi tänker mobilt först och den inte kommer att se riktigt lika ut, 
     börjar vi med att sätta "display: none" på den. Vi kommer att ändra detta till större storlekar senare. */
-    
-    header .mobile {
-        font-size: 1.5rem;
-        margin: 1rem;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        padding: 1rem;
-    }
-    
-    .fa-times {
-        color: #550055;
-    }
-    
-    .fa-bars {
-        color: #ffba00;
-        background-color: rgba(85, 0, 85, .5);
-        border-radius: .5rem;
-    }
-    
-    nav {
-        /* Hamburgermeny */
-        display: inline-block;
-        display: none;
-        background-color: rgba( 255, 186, 0, .7);
-        position: fixed;
-        top: 0;
-        left: 0;
-        text-align: left;
-        z-index: 1;
-        width: 50%;
-        height: 100%;
-        padding: 4.5rem 0 1.5rem 3rem;
-    }
-    
-    nav li {
-        display: block;
-        padding: 0 1em;
-    }
-    
-    nav a {
-        text-decoration: none;
-        color: #550055;
-        font-family: 'Montserrat Alternates', Arial, sans-serif;
-        display: inline-block;
-    }
-    /******************************
+
+header #mobile-button {
+    font-size: 1.5rem;
+    margin: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 1rem;
+
+    cursor: pointer;
+}
+header #mobile-button.active {
+    background: transparent;
+}
+
+.fa-times {
+    color: #550055;
+}
+
+.fa-bars {
+    color: #ffba00;
+    border-radius: 0.5rem;
+    background-color: rgba(85, 0, 85, 0.5);
+}
+
+nav {
+    background-color: rgba(255, 186, 0, 0.7);
+}
+nav.mobile {
+    z-index: 1;
+    width: 0;
+    display: inline;
+    position: fixed;
+    text-align: left;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    display: inline;
+    padding: 4.5rem 0 1.5rem 3rem;
+}
+nav.mobile.hidden {
+    display: inline;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
+}
+nav.mobile.visible {
+    transform: translateX(0);
+    transition: transform 0.4s ease-out;
+}
+nav.hidden {
+    display: none;
+}
+
+nav li {
+    display: block;
+    padding: 0 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #550055;
+    font-family: "Montserrat Alternates", Arial, sans-serif;
+    display: inline-block;
+}
+/******************************
     Content
     ******************************/
-    /** Stil för content, som har display: grid, för att vi ska kunna placera sidebar snyggt i alla storlekar. Vid den minsta skärmstorleken ligger allt ovanpå varandra, så detta märks inte än.  **/
-    
-    .content {
-        margin: 0 auto;
-        max-width: 70em;
-        /* Bredden på container blir aldrig större än 70em. Detta för att vi ska ha den så stor som möjligt på mindre skärmar, men ändå ha den smalare och centrerad i full bredd. */
-        padding: 0 2rem;
-        color: #FFF8E5;
-        margin-bottom: 2em;
-    }
-    
-    .sidebar {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-    }
-    /* Design av boxarna i sidebar. */
-    
-    .box {
-        border-radius: .3em;
-        border-bottom-right-radius: .5rem;
-        font-size: 1.3rem;
-        background: #550055;
-    }
-    
-    .box h2 {
-        border-top-left-radius: .5rem;
-        border-top-right-radius: .5rem;
-        background: #ffba00;
-        color: #550055;
-        padding: .3em 1.1em;
-        margin: 0;
-    }
-    
-    .box-list {
-        padding: .7em 1.1em;
-    }
-    
-    .box-list a {
-        font-size: .8em;
-        font-weight: normal;
-    }
-    /******************************
+/** Stil för content, som har display: grid, för att vi ska kunna placera sidebar snyggt i alla storlekar. Vid den minsta skärmstorleken ligger allt ovanpå varandra, så detta märks inte än.  **/
+
+.content {
+    margin: 0 auto;
+    max-width: 70em;
+    /* Bredden på container blir aldrig större än 70em. Detta för att vi ska ha den så stor som möjligt på mindre skärmar, men ändå ha den smalare och centrerad i full bredd. */
+    padding: 0 2rem;
+    color: #fff8e5;
+    margin-bottom: 2em;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+/* Design av boxarna i sidebar. */
+
+.box {
+    border-radius: 0.3em;
+    border-bottom-right-radius: 0.5rem;
+    font-size: 1.3rem;
+    background: #550055;
+}
+
+.box h2 {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background: #ffba00;
+    color: #550055;
+    padding: 0.3em 1.1em;
+    margin: 0;
+}
+
+.box-list {
+    padding: 0.7em 1.1em;
+}
+
+.box-list a {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+/******************************
     Discography- och membersektionerna
     ******************************/
-    
-    .flex-container {
-        /*Boxarna visas i en flexlayout. */
-        display: flex;
-        /* De byggs på radvis. När de når slutet på aktuell bredd, börjar en ny rad. */
-        flex-flow: row wrap;
-        /* växer från mitten och boxarna har jämnt avstånd till varandra. */
-        justify-content: space-evenly;
-        gap: 2em;
-        /* 2em mellan boxarna */
-    }
-    
-    .flex-item {
-        box-sizing: content-box;
-        /* Jag vill inte att border ska räknas in i slutgiltiga storleken, eftersom jag vet att både boxen och bilderna ska vara 200px stora (förut har vi sagt att vi vill det, när vi gör layouter) */
-        border: 1px solid #FFF8E5;
-        width: 200px;
-        height: 200px;
-        position: relative;
-        /* för att hover-effekten ska kunna placera sig över bilden. */
-        transition: all ease-in-out 0.3s;
-    }
-    /** Effekt med bakgrund och text när man hovrar över bilden **/
-    
-    .flex-item>.overlay {
-        opacity: 0;
-        height: 0;
-        transition: opacity, height ease-out .2s;
-    }
-    
-    .flex-item .details {
-        display: none;
-    }
-    
-    .flex-item .details h3 {
-        font-weight: bold;
-    }
-    
-    .flex-item:hover>.overlay {
-        opacity: 1;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 200px;
-        height: 200px;
-        background: linear-gradient(180deg, rgba(255, 186, 0, .4) 0%, rgba(85, 0, 85, .9) 90%);
-    }
-    
-    .flex-item:hover .details {
-        position: absolute;
-        text-align: center;
-        bottom: 0;
-        left: 0;
-        display: inline;
-        font-size: .8em;
-        line-height: 1.3em;
-        padding: .8em;
-        color: #FFF8E5;
-    }
-    
-    .footer {
-        background-color: rgba( 255, 186, 0, .1);
-        padding: 1em;
-        color: #FFF8E5;
-    }
-    /******************************
+
+.flex-container {
+    /*Boxarna visas i en flexlayout. */
+    display: flex;
+    /* De byggs på radvis. När de når slutet på aktuell bredd, börjar en ny rad. */
+    flex-flow: row wrap;
+    /* växer från mitten och boxarna har jämnt avstånd till varandra. */
+    justify-content: space-evenly;
+    gap: 2em;
+    /* 2em mellan boxarna */
+}
+
+.flex-item {
+    box-sizing: content-box;
+    /* Jag vill inte att border ska räknas in i slutgiltiga storleken, eftersom jag vet att både boxen och bilderna ska vara 200px stora (förut har vi sagt att vi vill det, när vi gör layouter) */
+    border: 1px solid #fff8e5;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /* för att hover-effekten ska kunna placera sig över bilden. */
+    transition: all ease-in-out 0.3s;
+}
+/** Effekt med bakgrund och text när man hovrar över bilden **/
+
+.flex-item > .overlay {
+    opacity: 0;
+    height: 0;
+    transition: opacity, height ease-out 0.2s;
+}
+
+.flex-item .details {
+    display: none;
+}
+
+.flex-item .details h3 {
+    font-weight: bold;
+}
+
+.flex-item:hover > .overlay {
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 186, 0, 0.4) 0%,
+        rgba(85, 0, 85, 0.9) 90%
+    );
+}
+
+.flex-item:hover .details {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    display: inline;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    padding: 0.8em;
+    color: #fff8e5;
+}
+
+.footer {
+    background-color: rgba(255, 186, 0, 0.1);
+    padding: 1em;
+    color: #fff8e5;
+}
+/******************************
     Stil för skärmar som är mer än 450px breda. 
     ******************************/
-    
-    @media (min-width: 450px) {
-        body {
-            font-size: 14pt;
-        }
-        header h1 {
-            font-size: 4.5em;
-        }
-        header .mobile {
-            font-size: 2rem;
-        }
-        h2 {
-            margin-top: 3rem;
-        }
+
+@media (min-width: 450px) {
+    body {
+        font-size: 14pt;
     }
-    /******************************
+    header h1 {
+        font-size: 4.5em;
+    }
+    header #mobile-button {
+        font-size: 2rem;
+    }
+    h2 {
+        margin-top: 3rem;
+    }
+}
+/******************************
 Stil för skärmar som är mer än 650px breda. 
 ******************************/
-    
-    @media (min-width: 650px) {
-        body {
-            /* Den näst minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */
-            background-image: url(../images/background-900.png);
-            font-size: 14pt;
-        }
-        header h1 {
-            font-size: 6em;
-            margin-top: 2em;
-        }
-        header .mobile {
-            display: none;
-        }
-        nav {
-            display: block;
-            width: 100%;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            transition: all 0.2s ease;
-            padding: .7rem;
-            height: inherit;
-        }
-        .scrolled {
-            background-color: rgba( 255, 186, 0, 1);
-            font-size: .7em;
-            padding: .5em;
-        }
-        nav li {
-            display: inline;
-        }
-        h2 {
-            font-size: 1.5em;
-            margin-top: 60px;
-        }
-        .box h2 {
-            padding: .4em 1em;
-            font-size: 1em;
-            margin-top: 0;
-        }
-        .box-list {
-            padding: 1em;
-            color: #ffba00;
-        }
-        .sidebar {
-            margin-top: 60px;
-        }
+
+@media (min-width: 650px) {
+    body {
+        /* Den näst minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */
+        background-image: url(../images/background-900.png);
+        font-size: 14pt;
     }
-    /******************************
+    header h1 {
+        font-size: 6em;
+        margin-top: 2em;
+    }
+    header #mobile-button {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        display: block;
+        position: fixed;
+        top: 0;
+        text-align: center;
+        transition: all 0.2s ease;
+        padding: 0.7rem;
+        height: inherit;
+    }
+    .scrolled {
+        background-color: rgba(255, 186, 0, 1);
+        font-size: 0.7em;
+        padding: 0.5em;
+    }
+    nav li {
+        display: inline;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-top: 60px;
+    }
+    .box h2 {
+        padding: 0.4em 1em;
+        font-size: 1em;
+        margin-top: 0;
+    }
+    .box-list {
+        padding: 1em;
+        color: #ffba00;
+    }
+    .sidebar {
+        margin-top: 60px;
+    }
+}
+/******************************
 Tillfällig stil för annan layout på side-bar.
 ******************************/
-    
-    @media(min-width: 650px) and (max-width: 1099px) {
-        .sidebar {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .box {
-            flex-basis: 20em;
-        }
+
+@media (min-width: 650px) and (max-width: 1099px) {
+    .sidebar {
+        flex-direction: row;
+        justify-content: space-between;
     }
-    /******************************
+    .box {
+        flex-basis: 20em;
+    }
+}
+/******************************
 Stil för skärmar som är mer än 1200px breda. 
 ******************************/
-    
-    @media (min-width: 1100px) {
-        body {
-            background-image: url(../images/background-1920.png);
-            font-size: 15pt;
-        }
-        header h1 {
-            font-size: 6em;
-            margin-top: 1.7em;
-        }
-        /* Det är bara i det bredaste läget som vi vill ha en gridlayout. */
-        .content {
-            display: grid;
-            grid-gap: 2em;
-            grid-template-columns: 2fr 1fr;
-        }
-        .sidebar {
-            grid-column: 2;
-            grid-row: span 3;
-        }
-        .members,
-        .discography {
-            grid-column: 1;
-        }
+
+@media (min-width: 1100px) {
+    body {
+        background-image: url(../images/background-1920.png);
+        font-size: 15pt;
     }
-    /**
+    header h1 {
+        font-size: 6em;
+        margin-top: 1.7em;
+    }
+    nav {
+        text-align: right;
+    }
+    /* Det är bara i det bredaste läget som vi vill ha en gridlayout. */
+    .content {
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: 2fr 1fr;
+    }
+    .sidebar {
+        grid-column: 2;
+        grid-row: span 3;
+    }
+    .members,
+    .discography {
+        grid-column: 1;
+    }
+}
+/**
   Trevlig texteffekt
 
     background-image: linear-gradient(90deg, rgba(85,0,85,1) 0%,  rgba(255,0,85,1) 50%, rgba(255,186,0,1) 100%);
