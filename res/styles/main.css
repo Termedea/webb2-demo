@@ -176,16 +176,13 @@ header #mobile-button {
     top: 0;
     left: 0;
     z-index: 2;
-    padding: 1rem;
-
+    padding: 0.7rem;
     cursor: pointer;
-}
-header #mobile-button.active {
-    background: transparent;
 }
 
 .fa-times {
     color: #550055;
+    background: transparent;
 }
 
 .fa-bars {
@@ -204,28 +201,23 @@ nav.mobile {
     position: fixed;
     text-align: left;
     height: 100%;
-    width: 50%;
+    width: 60%;
     top: 0;
     left: 0;
     display: inline;
-    padding: 4.5rem 0 1.5rem 3rem;
-}
-nav.mobile.hidden {
-    display: inline;
-    transform: translateX(-100%);
-    transition: transform 0.4s ease-out;
-}
-nav.mobile.visible {
     transform: translateX(0);
     transition: transform 0.4s ease-out;
 }
-nav.hidden {
-    display: none;
+nav.mobile.hidden {
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-out;
 }
-
+nav ul {
+    margin: 5rem 1.5rem;
+}
 nav li {
     display: block;
-    padding: 0 1em;
+    margin: 1rem 0;
 }
 
 nav a {
@@ -368,7 +360,19 @@ nav a {
     h2 {
         margin-top: 3rem;
     }
+    nav.mobile {
+        width: 50%;
+    }
+    nav ul {
+        margin: 0 5rem;
+        font-size: 1em;
+    }
+    nav li {
+        display: block;
+        padding: 0 1em;
+    }
 }
+
 /******************************
 Stil för skärmar som är mer än 650px breda. 
 ******************************/

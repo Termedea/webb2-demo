@@ -2,7 +2,6 @@
 const navMainMenu = document.getElementById("main-menu");
 const scrollClass = "scrolled";
 const hiddenClass = "hidden";
-const visibleClass = "visible";
 const mobileClass = "mobile";
 const barsClass = "fa-bars";
 const closeClass = "fa-times";
@@ -25,32 +24,25 @@ function init() {
 
 function toggleVisible(e) {
     if (!mediumScreenMQ.matches) {
-        if (!navClasses.contains(mobileClass)) navClasses.add(mobileClass);
         if (
             navClasses.contains(hiddenClass) &&
             buttonClasses.contains(barsClass)
         ) {
             navClasses.remove(hiddenClass);
-            navClasses.add(visibleClass);
             buttonClasses.add(closeClass);
             buttonClasses.remove(barsClass);
         } else {
             navClasses.add(hiddenClass);
-            navClasses.remove(visibleClass);
             buttonClasses.remove(closeClass);
             buttonClasses.add(barsClass);
         }
     }
 }
 function hideMenuForSmallScreens() {
-    if (!mediumScreenMQ.matches) {
-        navClasses.add(hiddenClass);
-        navClasses.add(mobileClass);
+    if (mediumScreenMQ.matches && navClasses.contains(mobileClass)) {
+        navClasses.remove(mobileClass);
     } else {
-        if (navClasses.contains(hiddenClass)) {
-            navClasses.remove(hiddenClass);
-            navClasses.remove(mobileClass);
-        }
+        navClasses.add(mobileClass);
     }
 }
 
