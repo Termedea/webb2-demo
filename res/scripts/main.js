@@ -39,7 +39,7 @@ function toggleVisible(e) {
     }
 }
 function hideMenuForSmallScreens() {
-    if (mediumScreenMQ.matches && navClasses.contains(mobileClass)) {
+    if (mediumScreenMQ.matches) {
         navClasses.remove(mobileClass);
     } else {
         navClasses.add(mobileClass);
