@@ -5,8 +5,10 @@ const hiddenClass = "hidden";
 const mobileClass = "mobile";
 const barsClass = "fa-bars";
 const closeClass = "fa-times";
+const minScroll = 100;
 const mobileMenuButton = document.getElementById("mobile-button");
 var buttonClasses = mobileMenuButton.classList;
+/* Match media är media queries för javascript. */
 const mediumScreenMQ = window.matchMedia("(min-width: 650px)");
 var navClasses = navMainMenu.classList;
 
@@ -46,9 +48,9 @@ function hideMenuForSmallScreens() {
     }
 }
 
-/* Ändrar utseende på menyn efter viss scroll */
+/* Ändrar utseende på menyn efter viss scroll (man får prova sig fram till siffran). */
 function scrolling() {
-    if (window.scrollY > 100) {
+    if (window.scrollY > minScroll) {
         navMainMenu.classList.add(scrollClass);
     } else {
         navMainMenu.classList.remove(scrollClass);
