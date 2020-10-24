@@ -79,7 +79,7 @@ html {
 body {
     background-attachment: fixed;
     background-size: cover;
-    font-size: 12pt;
+    font-size: 18px;
     line-height: 2rem;
     /* Den minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */
     background-image: url(../images/background-640.png);
@@ -346,24 +346,24 @@ Discography- och membersektionerna
 /******************************
 Footer
 ******************************/
-.footer {
+footer {
     background-color: rgba(255, 186, 0, 0.1);
     padding: 1.5em;
     color: #fff8e5;
     text-align: center;
 }
-.footer .icon {
+footer .icon {
     font-size: 1.8rem;
 }
 /* Rensar hover-effekten från footer-länkarna. */
-.footer a::after {
+footer a::after {
     content: none;
 }
-.footer a {
+footer a {
     opacity: 0.5;
     transition: opacity ease-in 0.5s;
 }
-.footer a:hover {
+footer a:hover {
     opacity: 1;
     transition: opacity ease-in 0.5s;
 }
@@ -372,9 +372,6 @@ Stil för skärmar som är mer än 450px breda.
 ******************************/
 
 @media (min-width: 450px) {
-    body {
-        font-size: 14pt;
-    }
     header h1 {
         font-size: 4.5em;
     }
@@ -405,7 +402,7 @@ Stil för skärmar som är mer än 650px breda.
     body {
         /* Den näst minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */
         background-image: url(../images/background-900.png);
-        font-size: 14pt;
+        font-size: 18px;
     }
     header h1 {
         font-size: 6em;
@@ -473,7 +470,7 @@ Stil för skärmar som är mer än 1200px breda.
 @media (min-width: 1100px) {
     body {
         background-image: url(../images/background-1920.png);
-        font-size: 15pt;
+        font-size: 20px;
     }
     header h1 {
         font-size: 6em;
@@ -482,7 +479,7 @@ Stil för skärmar som är mer än 1200px breda.
     nav {
         text-align: right;
     }
-    /* Det är bara i det bredaste läget som vi vill ha en gridlayout. */
+    /* Det är bara i det bredaste läget som vi vcill ha en gridlayout. */
     .content {
         display: grid;
         grid-gap: 2em;
