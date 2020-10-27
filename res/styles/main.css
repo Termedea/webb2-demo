@@ -81,6 +81,7 @@ body {
     background-size: cover;
     font-size: 18px;
     line-height: 2rem;
+    background-color: #2b002b;
     /* Den minsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */
     background-image: url(../images/background-640.png);
 }
