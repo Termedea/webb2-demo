@@ -241,8 +241,8 @@ nav a {
 
 .content {
     margin: 0 auto;
-    max-width: 70em;
     /* Bredden på container blir aldrig större än 70em. Detta för att vi ska ha den så stor som möjligt på mindre skärmar, men ändå ha den smalare och centrerad i full bredd. */
+    max-width: 70em;
     padding: 0 2rem;
     color: #fff8e5;
     margin-bottom: 2em;
