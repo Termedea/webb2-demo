@@ -1,21 +1,21 @@
 /*** Variabler ***/
-const navMainMenu = document.getElementById("main-menu");
-const scrollClass = "scrolled";
-const hiddenClass = "hidden";
-const mobileClass = "mobile";
-const barsClass = "fa-bars";
-const closeClass = "fa-times";
+const navMainMenu = document.getElementById('main-menu');
+const scrollClass = 'scrolled';
+const hiddenClass = 'hidden';
+const mobileClass = 'mobile';
+const barsClass = 'fa-bars';
+const closeClass = 'fa-times';
 const minScroll = 100;
-const mobileMenuButton = document.getElementById("mobile-button");
+const mobileMenuButton = document.getElementById('mobile-button');
 var buttonClasses = mobileMenuButton.classList;
 /* Match media är media queries för javascript. */
-const mediumScreenMQ = window.matchMedia("(min-width: 650px)");
+const mediumScreenMQ = window.matchMedia('(min-width: 650px)');
 var navClasses = navMainMenu.classList;
 
 /*** Eventlyssnare ***/
-window.addEventListener("scroll", throttle(scrolling, 100));
-mobileMenuButton.addEventListener("click", toggleVisible);
-mediumScreenMQ.addEventListener("change", hideMenuForSmallScreens);
+window.addEventListener('scroll', scrolling, 100);
+mobileMenuButton.addEventListener('click', toggleVisible);
+mediumScreenMQ.addEventListener('change', hideMenuForSmallScreens);
 
 init();
 /*** Funktioner ***/
@@ -55,21 +55,4 @@ function scrolling() {
     } else {
         navMainMenu.classList.remove(scrollClass);
     }
-}
-
-/* Lånad funktion för att vi inte ska behöva anropa vår eventhanterare varje gång någon scrollar*/
-function throttle(callback, limit) {
-    var waiting = false; // Initially, we're not waiting
-    return function () {
-        // We return a throttled function
-        if (!waiting) {
-            // If we're not waiting
-            callback.apply(this, arguments); // Execute users function
-            waiting = true; // Prevent future invocations
-            setTimeout(function () {
-                // After a period of time
-                waiting = false; // And allow future invocations
-            }, limit);
-        }
-    };
 }
