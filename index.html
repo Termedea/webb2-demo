@@ -1,214 +1,343 @@
 <!DOCTYPE html>
 <html lang="sv">
-<!-- https://www.w3schools.com/tags/ref_language_codes.asp -->
+    <!-- https://www.w3schools.com/tags/ref_language_codes.asp -->
 
-<head>
-    <meta charset="UTF-8">
-    <!-- html5-varianten av <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- responsive design: https://www.w3schools.com/css/css_rwd_viewport.asp -->
-    <link rel="stylesheet" href="res/styles/main.css" class="css">
-    <link rel="stylesheet" href="res/vendor/fa/all.css">
-    <title>TesseracT Fansite</title>
-    <link rel="icon" href="/images/icon.png" type="image/x-icon">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- html5-varianten av <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- responsive design: https://www.w3schools.com/css/css_rwd_viewport.asp -->
+        <link rel="stylesheet" href="res/styles/main.css" class="css" />
+        <link rel="stylesheet" href="res/vendor/fa/all.css" />
+        <title>TesseracT Fansite</title>
+        <link rel="icon" href="/images/icon.png" type="image/x-icon" />
+    </head>
 
-<body>
-    <header>
-        <i id="mobile-button" class="fas fa-bars"></i>
-        <nav id="main-menu" class="main-menu">
-
-            <ul>
-                <li><a href="#" id="home-link">Home</a></li>
-                <li><a href="#about" id="about-link">About</a></li>
-                <li><a href="#members" id="members-link">Members</a></li>
-                <li><a href="#discography" id="discography-link">Discography</a></li>
-            </ul>
-        </nav>
-        <h1>TesseracT</h1>
-    </header>
-
-    <div class="content">
-        <div id="about" class="page-section about" data-matching-link="#about-link">
-            <h2>About</h2>
-            <p>Tesseract (often stylized as TesseracT) are an English <a
-                    href="https://en.wikipedia.org/wiki/Progressive_metal">progressive metal</a> band from Milton
-                Keynes, England. The band, formed in 2003, consists of Daniel Tompkins (lead vocals), Alec
-                "Acle" Kahney (lead guitar and producer), James Monteith (rhythm guitar), Amos Williams (bass, backing
-                vocals), and Jay Postones (drums, percussion). The band is currently signed to <a
-                    href="https://en.wikipedia.org/wiki/Kscope">Kscope</a>. They are credited
-                as one of the bands to pioneer the <a href="https://en.wikipedia.org/wiki/Djent">djent</a> movement in
-                progressive metal. </p>
-            <p>Tesseract play a specific style of progressive metal that often features <a
-                    href="https://en.wikipedia.org/wiki/Polyrhythm">polyrhythmic</a> riffs, odd time
-                signatures, and several atmospheric layers. The band have stated that they do not compose their music
-                with specific polyrhythms in mind, but play what they feel fits the groove. They also include a
-                mid-range distorted guitar tone and melodic clean passages, heavily influenced by ambient
-                music. The band typically plays in the style of the subgenre djent, pioneered by <a
-                    href="https://en.wikipedia.org/wiki/Meshuggah">Meshuggah</a>
-                and <a href="https://en.wikipedia.org/wiki/Sikth">SikTh</a>. The vocal style of the band has seen a
-                considerable shift. On One, Daniel Tompkins employed a
-                mixture of clean and harsh vocals, with an emphasis on long, drawn out notes. However, Ashe O'Hara's
-                performances on Altered State dropped the harsh vocals entirely, in favour of a more melodic style with
-                an emphasis on strong melodic "hooks". </p>
-            <p>Throughout their career, the band have produced, mixed, and mastered all of their material themselves.
-                Williams is a qualified audio engineer and Acle Kahney has carried out production, mixing, and mastering
-                work for several other progressive metal bands under the name 4D Sounds</p>
-            <p>As of 2018, Tesseract have released four studio albums: <a
-                    href="https://en.wikipedia.org/wiki/One_(Tesseract_album)">One</a>,
-                <a href="https://en.wikipedia.org/wiki/Altered_State_(Tesseract_album)">Altered State</a>, <a
-                    href="https://en.wikipedia.org/wiki/Polaris_(Tesseract_album)">Polaris</a>, and
-                <a href="https://en.wikipedia.org/wiki/Sonder_(album)">Sonder</a>, as well as a live album,
-                Odyssey/Scala, and the extended plays
-                Concealing Fate, Perspective and Errai.</p>
-
-        </div>
-        <div class="sidebar">
-            <div class="box">
-                <h2 class="box-header"><i class="icon fas fa-link"></i>Links</h2>
-                <ul class="box-list">
-                    <li><i class="icon fab fa-wikipedia-w"></i><a
-                            href="https://en.wikipedia.org/wiki/Tesseract_(band)">Wikipedia</a>
-                    </li>
-                    <li><i class="icon fab fa-youtube"></i><a
-                            href="https://www.youtube.com/channel/UCzvBMFhS0gqjx1rA0bswiHg">YouTube</a>
-                    </li>
-                    <li><i class="icon fab fa-facebook-f"></i><a
-                            href="https://www.facebook.com/tesseractband">Facebook</a>
-                    </li>
-                    <li><i class="icon fab fa-lastfm"></i><a href="https://www.last.fm/music/TesseracT">Last.fm</a></li>
-                    <li><i class="icon fab fa-spotify"></i><a
-                            href="https://open.spotify.com/artist/23ytwhG1pzX6DIVWRWvW1r?si=zFY_Asv_SMG1TvgfnRG89g">Spotify</a>
+    <body>
+        <header>
+            <i id="mobile-button" class="fas fa-bars"></i>
+            <nav id="main-menu" class="main-menu hidden">
+                <ul>
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#about" id="about-link">About</a></li>
+                    <li><a href="#members" id="members-link">Members</a></li>
+                    <li>
+                        <a href="#discography" id="discography-link"
+                            >Discography</a
+                        >
                     </li>
                 </ul>
+            </nav>
+            <h1>TesseracT</h1>
+        </header>
+
+        <div class="content">
+            <div
+                id="about"
+                class="page-section about"
+                data-matching-link="#about-link"
+            >
+                <h2>About</h2>
+                <p>
+                    Tesseract (often stylized as TesseracT) are an English
+                    <a href="https://en.wikipedia.org/wiki/Progressive_metal"
+                        >progressive metal</a
+                    >
+                    band from Milton Keynes, England. The band, formed in 2003,
+                    consists of Daniel Tompkins (lead vocals), Alec "Acle"
+                    Kahney (lead guitar and producer), James Monteith (rhythm
+                    guitar), Amos Williams (bass, backing vocals), and Jay
+                    Postones (drums, percussion). The band is currently signed
+                    to
+                    <a href="https://en.wikipedia.org/wiki/Kscope">Kscope</a>.
+                    They are credited as one of the bands to pioneer the
+                    <a href="https://en.wikipedia.org/wiki/Djent">djent</a>
+                    movement in progressive metal.
+                </p>
+                <p>
+                    Tesseract play a specific style of progressive metal that
+                    often features
+                    <a href="https://en.wikipedia.org/wiki/Polyrhythm"
+                        >polyrhythmic</a
+                    >
+                    riffs, odd time signatures, and several atmospheric layers.
+                    The band have stated that they do not compose their music
+                    with specific polyrhythms in mind, but play what they feel
+                    fits the groove. They also include a mid-range distorted
+                    guitar tone and melodic clean passages, heavily influenced
+                    by ambient music. The band typically plays in the style of
+                    the subgenre djent, pioneered by
+                    <a href="https://en.wikipedia.org/wiki/Meshuggah"
+                        >Meshuggah</a
+                    >
+                    and <a href="https://en.wikipedia.org/wiki/Sikth">SikTh</a>.
+                    The vocal style of the band has seen a considerable shift.
+                    On One, Daniel Tompkins employed a mixture of clean and
+                    harsh vocals, with an emphasis on long, drawn out notes.
+                    However, Ashe O'Hara's performances on Altered State dropped
+                    the harsh vocals entirely, in favour of a more melodic style
+                    with an emphasis on strong melodic "hooks".
+                </p>
+                <p>
+                    Throughout their career, the band have produced, mixed, and
+                    mastered all of their material themselves. Williams is a
+                    qualified audio engineer and Acle Kahney has carried out
+                    production, mixing, and mastering work for several other
+                    progressive metal bands under the name 4D Sounds
+                </p>
+                <p>
+                    As of 2018, Tesseract have released four studio albums:
+                    <a
+                        href="https://en.wikipedia.org/wiki/One_(Tesseract_album)"
+                        >One</a
+                    >,
+                    <a
+                        href="https://en.wikipedia.org/wiki/Altered_State_(Tesseract_album)"
+                        >Altered State</a
+                    >,
+                    <a
+                        href="https://en.wikipedia.org/wiki/Polaris_(Tesseract_album)"
+                        >Polaris</a
+                    >, and
+                    <a href="https://en.wikipedia.org/wiki/Sonder_(album)"
+                        >Sonder</a
+                    >, as well as a live album, Odyssey/Scala, and the extended
+                    plays Concealing Fate, Perspective and Errai.
+                </p>
             </div>
-            <div class="box">
-                <h2 class="box-header"><i class="icon fab fa-spotify"></i>Listen to similar bands</h2>
-                <ul class="box-list">
-                    <li><a
-                            href="https://open.spotify.com/artist/6d24kC5fxHFOSEAmjQPPhc?si=yZLUum6pRquSTAxQUIvuog">Periphery</a>
-                    </li>
-                    <li><a
-                            href="https://open.spotify.com/artist/6v9XKyEf4HKmUMr3D6weIO?si=MmmQ_S39QhOCaJck0Rwwkg">Textures</a>
-                    </li>
-                    <li><a
-                            href="https://open.spotify.com/artist/5yjbUO1Jocui7RKE30zfLT?si=WW-949LVQ8KRizACcy5kAQ">Riverside</a>
-                    </li>
-                    <li><a href="https://open.spotify.com/artist/3NW2VkBpoHFv327eSuH490?si=qY3zI0ZiSmiLAaaAKsD_ww">Dead
-                            Letter Circus</a></li>
-                    <li><a href="https://open.spotify.com/artist/1uRpg2s2jNaxbmoNiJDGfd?si=WDpbWiDGSHy-OGShkYnxww">Pain
-                            of Salvation</a></li>
-                </ul>
+            <div class="sidebar">
+                <div class="box">
+                    <h2 class="box-header">
+                        <i class="icon fas fa-link"></i>Links
+                    </h2>
+                    <ul class="box-list">
+                        <li>
+                            <i class="icon fab fa-wikipedia-w"></i
+                            ><a
+                                href="https://en.wikipedia.org/wiki/Tesseract_(band)"
+                                >Wikipedia</a
+                            >
+                        </li>
+                        <li>
+                            <i class="icon fab fa-youtube"></i
+                            ><a
+                                href="https://www.youtube.com/channel/UCzvBMFhS0gqjx1rA0bswiHg"
+                                >YouTube</a
+                            >
+                        </li>
+                        <li>
+                            <i class="icon fab fa-facebook-f"></i
+                            ><a href="https://www.facebook.com/tesseractband"
+                                >Facebook</a
+                            >
+                        </li>
+                        <li>
+                            <i class="icon fab fa-lastfm"></i
+                            ><a href="https://www.last.fm/music/TesseracT"
+                                >Last.fm</a
+                            >
+                        </li>
+                        <li>
+                            <i class="icon fab fa-spotify"></i
+                            ><a
+                                href="https://open.spotify.com/artist/23ytwhG1pzX6DIVWRWvW1r?si=zFY_Asv_SMG1TvgfnRG89g"
+                                >Spotify</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h2 class="box-header">
+                        <i class="icon fab fa-spotify"></i>Listen to similar
+                        bands
+                    </h2>
+                    <ul class="box-list">
+                        <li>
+                            <a
+                                href="https://open.spotify.com/artist/6d24kC5fxHFOSEAmjQPPhc?si=yZLUum6pRquSTAxQUIvuog"
+                                >Periphery</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://open.spotify.com/artist/6v9XKyEf4HKmUMr3D6weIO?si=MmmQ_S39QhOCaJck0Rwwkg"
+                                >Textures</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://open.spotify.com/artist/5yjbUO1Jocui7RKE30zfLT?si=WW-949LVQ8KRizACcy5kAQ"
+                                >Riverside</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://open.spotify.com/artist/3NW2VkBpoHFv327eSuH490?si=qY3zI0ZiSmiLAaaAKsD_ww"
+                                >Dead Letter Circus</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://open.spotify.com/artist/1uRpg2s2jNaxbmoNiJDGfd?si=WDpbWiDGSHy-OGShkYnxww"
+                                >Pain of Salvation</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                id="members"
+                class="page-section members"
+                data-matching-link="#members-link"
+            >
+                <h2>Members</h2>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/members/Acle Kahney.jpg"
+                            alt="Alec 'Acle' Kahney"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>Alec "Acle" Kahney</h3>
+                                <p>
+                                    Lead guitar (2003–present), rhythm guitar,
+                                    bass guitar (2003–2006)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/members/Amos Williams.jpg"
+                            alt="Amos Williams"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>Amos Williams</h3>
+                                <p>
+                                    Bass, growls, backing vocals (2006–present)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/members/Daniel Tompkins.jpg"
+                            alt="Daniel Tompkins"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>Daniel Tompkins</h3>
+                                <p>
+                                    Bass, growls, backing vocals (2006–present)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/members/Jay Postones.jpg"
+                            alt="Jay Postones"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>Jay Postones</h3>
+                                <p>Drums, percussion (2005–present)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/members/James Monteith.jpg"
+                            alt="James 'Metal' Monteith"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>James "Metal" Monteith</h3>
+                                <p>Rhythm guitar (2006–present)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                id="discography"
+                class="page-section discography"
+                data-matching-link="#history-link"
+            >
+                <h2>Discography</h2>
+                <h3>Studio albums</h3>
+                <div class="flex-container">
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/albums/200px-Tesseract_-_One.jpg"
+                            alt="One (2011)"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>One</h3>
+                                <p>Released: 22 March 2011 (Century Media)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/albums/200px-Tesseract_-_Altered_State.jpg"
+                            alt="Altered State (2013)"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>Altered State</h3>
+                                <p>Released: 27 May 2013 (Century Media)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/albums/200px-Tesseract_-_Polaris.jpg"
+                            alt="Polaris (2015)"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>Polaris</h3>
+                                <p>Released: 18 September 2015 (KScope)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-item">
+                        <img
+                            src="res/images/content/albums/200px-Tesseract_-_Sonder.jpg"
+                            alt="Sonder (2018)"
+                        />
+                        <div class="overlay">
+                            <div class="details">
+                                <h3>Sonder</h3>
+                                <p>Released: 20 April 2018 (KScope)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="members" class="page-section members" data-matching-link="#members-link">
-            <h2>Members</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <img src="res/images/content/members/Acle Kahney.jpg" alt="Alec 'Acle' Kahney" />
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>Alec "Acle" Kahney</h3>
-                            <p>Lead guitar (2003–present), rhythm guitar, bass guitar (2003–2006)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <img src="res/images/content/members/Amos Williams.jpg" alt="Amos Williams" />
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>Amos Williams</h3>
-                            <p>Bass, growls, backing vocals (2006–present)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <img src="res/images/content/members/Daniel Tompkins.jpg" alt="Daniel Tompkins" />
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>Daniel Tompkins</h3>
-                            <p>Bass, growls, backing vocals (2006–present)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <img src="res/images/content/members/Jay Postones.jpg" alt="Jay Postones" />
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>Jay Postones</h3>
-                            <p>Drums, percussion (2005–present)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <img src="res/images/content/members/James Monteith.jpg" alt="James 'Metal' Monteith" />
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>James "Metal" Monteith</h3>
-                            <p>Rhythm guitar (2006–present)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="discography" class="page-section discography" data-matching-link="#history-link">
-            <h2>Discography</h2>
-            <h3>Studio albums</h3>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <img src="res/images/content/albums/200px-Tesseract_-_One.jpg" alt="One (2011)">
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>One</h3>
-                            <p>Released: 22 March 2011 (Century Media)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <img src="res/images/content/albums/200px-Tesseract_-_Altered_State.jpg" alt="Altered State (2013)">
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>Altered State</h3>
-                            <p>Released: 27 May 2013 (Century Media)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <img src="res/images/content/albums/200px-Tesseract_-_Polaris.jpg" alt="Polaris (2015)">
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>Polaris</h3>
-                            <p>Released: 18 September 2015 (KScope)</p>
-                        </div>
-                    </div>
+        <footer>
+            <a href="https://www.youtube.com/channel/UCzvBMFhS0gqjx1rA0bswiHg"
+                ><i class="icon fab fa-youtube"></i
+            ></a>
 
-                </div>
-                <div class="flex-item">
-                    <img src="res/images/content/albums/200px-Tesseract_-_Sonder.jpg" alt="Sonder (2018)">
-                    <div class="overlay">
-                        <div class="details">
-                            <h3>Sonder</h3>
-                            <p>Released: 20 April 2018 (KScope)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
+            <a href="https://www.facebook.com/tesseractband"
+                ><i class="icon fab fa-facebook-f"></i
+            ></a>
 
+            <a href="https://www.last.fm/music/TesseracT"
+                ><i class="icon fab fa-lastfm"></i
+            ></a>
+            <a
+                href="https://open.spotify.com/artist/23ytwhG1pzX6DIVWRWvW1r?si=zFY_Asv_SMG1TvgfnRG89g"
+                ><i class="icon fab fa-spotify"></i
+            ></a>
+        </footer>
+    </body>
 
-        <a href="https://www.youtube.com/channel/UCzvBMFhS0gqjx1rA0bswiHg"><i class="icon fab fa-youtube"></i></a>
-
-        <a href="https://www.facebook.com/tesseractband"><i class="icon fab fa-facebook-f"></i></a>
-
-        <a href="https://www.last.fm/music/TesseracT"><i class="icon fab fa-lastfm"></i></a>
-        <a href="https://open.spotify.com/artist/23ytwhG1pzX6DIVWRWvW1r?si=zFY_Asv_SMG1TvgfnRG89g"><i
-                class="icon fab fa-spotify"></i></a>
-
-    </footer>
-</body>
-
-<script src="res/scripts/main.js"></script>
-
+    <script src="res/scripts/main.js"></script>
 </html>
